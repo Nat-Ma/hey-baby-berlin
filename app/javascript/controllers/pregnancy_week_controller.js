@@ -15,18 +15,19 @@ export default class extends Controller {
   setTrimester(pregnancyWeek) {
     let trimester = 0;
     let calcPosition = 0;
+    const screenWidth = (screen.width > 390) ? 390 : screen.width;
 
     if (pregnancyWeek < 14) {
       trimester = this.trimesterTargets[0]
-      calcPosition = (screen.width - trimester.clientWidth) / 2;
+      calcPosition = (screenWidth - trimester.clientWidth) / 2;
       this.positionTarget.style.marginLeft = `${calcPosition}px`;
     } else if (pregnancyWeek > 13 && pregnancyWeek < 28) {
       trimester = this.trimesterTargets[1]
-      calcPosition = trimester.previousElementSibling.clientWidth - (screen.width - trimester.clientWidth) / 2;
+      calcPosition = trimester.previousElementSibling.clientWidth - (screenWidth - trimester.clientWidth) / 2;
       this.positionTarget.style.marginLeft = `-${calcPosition+10}px`;
     } else {
       trimester = this.trimesterTargets[2]
-      const trimesterMarginRight = (screen.width - trimester.clientWidth) / 2;
+      const trimesterMarginRight = (screenWidth - trimester.clientWidth) / 2;
       calcPosition = this.positionTarget.scrollWidth - trimester.clientWidth - trimesterMarginRight;
       trimester.style.marginRight = `${trimesterMarginRight}px`;
       this.positionTarget.style.marginLeft = `-${calcPosition}px`;

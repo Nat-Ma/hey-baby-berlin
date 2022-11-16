@@ -1,5 +1,5 @@
 .onboarding {
-  height: 100vh;
+  height: $device-height;
   overflow: scroll;
   background-size: cover;
   padding: 40px 30px 20px;
@@ -88,5 +88,11 @@
 .signup {
   h1 {
     color: $black;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .onboarding {
+    height: 100vh;
   }
 }

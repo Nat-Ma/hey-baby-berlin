@@ -1,3 +1,8 @@
+.modal {
+  max-width: $device-width;
+  left: auto;
+}
+
 .modal-content {
   background: $light-orange;
   text-align: center;

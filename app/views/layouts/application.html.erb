@@ -31,14 +31,17 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <%# <p class="alert"><%= alert %>
-    <%#= render "shared/flashes" %>
-    <%= yield %>
-    <%# <script>
-      document.querySelectorAll('form').forEach(function (el) {
-        el.dataset.turbo = false
-      })
-    </script> %>
+    <div class="mobile-container">
+      <p class="notice"><%= notice %></p>
+      <%# <p class="alert"> %>
+      <%= alert %>
+      <%#= render "shared/flashes" %>
+      <%= yield %>
+      <%# <script>
+        document.querySelectorAll('form').forEach(function (el) {
+          el.dataset.turbo = false
+        })
+      </script> %>
+    </div>
   </body>
 </html>

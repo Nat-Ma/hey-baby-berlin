@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["cards", "line"]
 
   connect() {
-    console.log("NOOO")
     this.categoryShow();
     this.timelineShow();
   }
