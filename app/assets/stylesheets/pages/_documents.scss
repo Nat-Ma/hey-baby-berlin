@@ -2,9 +2,19 @@
   display: grid ;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-
 }
 
 .delete-document > a {
   color: black;
+}
+
+.upload-documents {
+  padding-top: 0;
+  height: calc(95vh - 53px);
+}
+
+@media only screen and (max-width: $device-width) {
+  .upload-documents {
+    height: calc(100vh - 53px);
+  }
 }

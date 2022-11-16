@@ -37,11 +37,11 @@
   <p class="padding"><strong>MY FILES</strong></p>
   <% if @documents.exists? %>
     <% if @documents.count > 2 %>
-      <div class="scroll-container" style="grid-template-columns: repeat(<%= @documents.count %>, 160px)">
+      <div class="scroll-container" style="grid-template-columns: repeat(<%= @documents.count %>, 160px)"></div>
     <% elsif @documents.count == 2 %>
-      <div class="scroll-container" style="grid-template-columns: repeat(<%= @documents.count %>, 1fr)">
+      <div class="scroll-container" style="grid-template-columns: repeat(<%= @documents.count %>, 1fr)"></div>
     <% else %>
-      <div class="scroll-container" style="grid-template-columns: 1fr">
+      <div class="scroll-container" style="grid-template-columns: 1fr"></div>
     <% end %>
       <% @documents.each do |document| %>
         <div class="card-file">
@@ -58,7 +58,6 @@
   <% else %>
       <p class="padding">You haven't uploaded any files yet</p>
   <% end %>
-  </div>
 </div>
 
 <%= render "shared/navbar_bottom" %>

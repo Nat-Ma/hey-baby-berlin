@@ -11,9 +11,9 @@
           <% @documents.each do |document| %>
             <% document.photos.each do |photo| %>
               <div class="card-file">
-              <%= link_to photo.url, target: "_blank" do %>
-                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-              <% end %>
+                <%= link_to photo.url, target: "_blank" do %>
+                  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                <% end %>
                 <div class="d-flex justify-content-between mx-2">
                   <div>
                     <p><%= document.name %></p>
@@ -29,6 +29,5 @@
         <% else %>
           <p style="text-align:center;">You haven't uploaded any documents yet.</p>
         <% end %>
-        </div>
   </div>
 <%= render "shared/navbar_bottom" %>

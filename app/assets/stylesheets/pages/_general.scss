@@ -1,11 +1,25 @@
 body {
-  background-color: $light-orange;
+  background-color: black;
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.mobile-container {
+  width: $device-width;
+  height: $device-height;
+  margin: 0 auto;
+  overflow: scroll;
+  border-radius: 30px;
+  background-color: $light-orange;
 }
 
 .container {
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 40px 24px 0px;
+  min-height: 100%;
 }
 
 .truncate {
@@ -27,4 +41,11 @@ hr {
   opacity: 1;
   height: 2px !important;
   margin: 30px 0;
+}
+
+@media only screen and (max-width: $device-width) {
+  .mobile-container {
+    height: 100vh;
+    border-radius: 0;
+  }
 }
