@@ -171,12 +171,13 @@
   background: white;
   height: 287px;
   transition: transform 0.3s ease;
-  padding: 12px 30px 20px 50px;
+  padding: 12px 30px 20px 30px;
   width: 100%;
   z-index: 5;
 
   &.hide{
     transform: translate(0px, 250px);
+    display: none;
   }
 
   .button-secondary{
@@ -185,5 +186,13 @@
 
   .hospital-circle{
   color: $bright-orange;
+  }
+}
+
+@media only screen and (min-width: $media-query-target) {
+  .hospital-details {
+    width: $device-width;
+    bottom: 79px;
+    height: auto;
   }
 }

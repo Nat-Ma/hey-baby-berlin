@@ -1,28 +1,32 @@
 <%= render "shared/navbar" %>
 
 <div class="onboarding signup" style="background-image: url('<%= asset_url('profile_onboarding.png') %>');">
-  <div class="container">
+  <div>
     <div>
-      <%# <h5 style="text-align:center;" class="mb-4">HEY BABY</h5> %>
 
-      <h1 style="text-align:center;" class="mb-4">My Profile</h1>
+      <h2 class="mb-4">My Profile</h1>
 
       <div>
         <div class="profile-card">
-          <h5>Full name:</h5>
+          <% if @profile.first_name || @profile.last_name %>
+            <h5>Full name</h5>
             <p><%= @profile.first_name %> <%= @profile.last_name %></p>
+          <% else %>
+            <p>sthom</p>
+          <% end %>
 
-          <h5>Address:</h5>
+          <% if @profile.address  %>
+            <h5>Address</h5>
             <p><%= @profile.address %></p>
+          <% end %>
 
-          <%# <h5>Birthdate:</h5>
-            <p><%= @profile.birthdate.strftime("%d. %m. %Y") %>
-            <%# </p> %>
+          <% if @profile.birthdate %>
+            <h5>Birthdate</h5>
+            <p><%= @profile.birthdate.strftime("%d. %m. %Y") %></p>
+          <% end %>
         </div>
 
-        <hr>
-
-        <div class="pregnancy-card">
+        <div class="profile-card">
           <h5>Your due date</h5>
           <div class="d-flex justify-content-between">
             <div>
@@ -31,9 +35,6 @@
             </div>
             <div>
               <%= link_to 'Edit', '#', class: "button-secondary d-block right", data: { bs_toggle: "modal", bs_target: "#editModal", turbo: false } %>
-              <%# <button type="button" class="button-secondary d-block right" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Edit
-              </button> %>
             </div>
           </div>
         </div>

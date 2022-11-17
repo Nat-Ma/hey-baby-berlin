@@ -32,9 +32,13 @@
 
   <body>
     <div class="mobile-container">
-      <p class="notice"><%= notice %></p>
+      <p class="notice">
+        <%= notice %>
+        <%= alert %>
+      </p>
+
       <%# <p class="alert"> %>
-      <%= alert %>
+
       <%#= render "shared/flashes" %>
       <%= yield %>
       <%# <script>

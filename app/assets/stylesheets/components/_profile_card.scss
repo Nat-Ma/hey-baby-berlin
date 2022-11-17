@@ -3,11 +3,9 @@
   flex-direction: column;
   justify-content: left;
   justify-content:space-between;
-  background-color: #ffebe7;
-  border-radius: $border-radius-10;
-  box-shadow: $box-shadow;
   margin: 2px;
-  padding: 20px 24px;
+  padding: 20px 0;
+  border-top: 1px solid $orange;
 
   h5 {
     color: black;
