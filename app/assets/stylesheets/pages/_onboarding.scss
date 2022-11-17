@@ -93,7 +93,7 @@
 
 @media only screen and (min-width: $media-query-target) {
   .onboarding {
-    height: 95vh;
+    height: $device-height;
     overflow: scroll;
   }
 }

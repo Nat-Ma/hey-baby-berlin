@@ -15,7 +15,7 @@ export default class extends Controller {
   setTrimester(pregnancyWeek) {
     let trimester = 0;
     let calcPosition = 0;
-    const screenWidth = (screen.width > 350) ? 350 : screen.width;
+    const screenWidth = (screen.width > 500) ? 350 : screen.width;
 
     if (pregnancyWeek < 14) {
       trimester = this.trimesterTargets[0]

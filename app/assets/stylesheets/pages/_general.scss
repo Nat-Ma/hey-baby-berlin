@@ -12,12 +12,12 @@ body {
   height: 100vh;
   width: 100vw;
   border-radius: 0;
+  position: relative;
 }
 
 .container {
   margin: 0 auto;
-  padding: 40px 24px 0px;
-  min-height: calc(95vh - 120px);
+  padding: 40px 24px 80px;;
 }
 
 .truncate {
@@ -44,12 +44,18 @@ hr {
 @media only screen and (min-width: $media-query-target) {
   .mobile-container {
     width: $device-width;
-    height: $device-height;
+    max-height: $device-height;
     margin: 0 auto;
     overflow: scroll;
     border-radius: 30px;
   }
   body {
-    background-color: black;
+    background-color: #e8b995;
+  }
+  .container {
+    z-index: 1;
+    position: relative;
+    min-height: calc(720px - 120px);
+    padding-bottom: 0;
   }
 }

@@ -196,6 +196,7 @@
     height: auto;
     &.hide{
       transform: translate(0px, 40px);
+      z-index: 0;
     }
   }
 }
