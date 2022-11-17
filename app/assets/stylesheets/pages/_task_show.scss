@@ -1,12 +1,19 @@
 .complete-form {
   padding: 14px 20px;
   box-shadow: $box-shadow;
-  position: sticky;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   z-index: 10;
   background-color: $light-orange;
   fieldset {
     margin-bottom: 0 !important;
+  }
+}
+
+@media only screen and (min-width: $media-query-target) {
+  .complete-form {
+    position: sticky;
+    width: $device-width;
   }
 }

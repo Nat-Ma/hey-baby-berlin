@@ -1,7 +1,3 @@
-.modal {
-  max-width: $device-width;
-  left: auto;
-}
 
 .modal-content {
   background: $light-orange;
@@ -28,14 +24,23 @@
 }
 
 .modal-dialog {
-  margin: 2.5rem;
+  margin: 2rem;
 }
 
 .show {
   display: flex !important;
   align-items: center;
+  justify-content: center;
 }
 
 .modal-body {
   font-family: $body-font;
+}
+
+@media only screen and (min-width: $media-query-target) {
+  .modal {
+    width: 350px;
+    left: auto;
+
+  }
 }

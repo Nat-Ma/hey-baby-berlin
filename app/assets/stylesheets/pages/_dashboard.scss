@@ -50,6 +50,7 @@
   background-color: $light-orange;
   box-shadow: $box-shadow;
   padding-top: 40px;
+  padding-bottom: 90px;
   h1 {
     text-align: left;
     font-size: 34px;
@@ -115,3 +116,9 @@
 //   margin-left: -290px;
 //   padding-right: 120px;;
 // }
+
+@media only screen and (min-width: $media-query-target) {
+  .container-dashboard {
+    padding-bottom: 0;
+  }
+}
