@@ -177,7 +177,7 @@
 
   &.hide{
     transform: translate(0px, 250px);
-    display: none;
+    opacity: 0;
   }
 
   .button-secondary{
@@ -194,5 +194,8 @@
     width: $device-width;
     bottom: 79px;
     height: auto;
+    &.hide{
+      transform: translate(0px, 40px);
+    }
   }
 }

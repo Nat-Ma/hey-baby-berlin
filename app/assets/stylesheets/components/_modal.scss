@@ -24,12 +24,13 @@
 }
 
 .modal-dialog {
-  margin: 2.5rem;
+  margin: 2rem;
 }
 
 .show {
   display: flex !important;
   align-items: center;
+  justify-content: center;
 }
 
 .modal-body {
@@ -38,7 +39,8 @@
 
 @media only screen and (min-width: $media-query-target) {
   .modal {
-    //max-width: $device-width;
+    width: 350px;
     left: auto;
+
   }
 }
